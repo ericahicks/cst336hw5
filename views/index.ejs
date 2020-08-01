@@ -1,0 +1,13 @@
+<%- include('partials/header.ejs') %>
+    <body>
+        <h1> Findout the Timezone </h1>
+        <p>Enter a location to get the timezone.</p>
+        <form action="/search">
+            <input type="text" placeholder="City" name="city" />
+            <input type="text" placeholder="State" name="state" />
+            <br><br>
+            <button>Search</button>
+        </form>
+<%- include('partials/footer.ejs') %>
+    </body>
+</html>

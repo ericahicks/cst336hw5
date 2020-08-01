@@ -1,0 +1,24 @@
+<%- include('partials/header.ejs') %>
+    <body>
+        <h1> Timezone of <span id="city"><%= city %></span>, <span id="state"><%= state %></span> </h1>
+        <p>Save the location to view later.</p>
+        <a href="/mylocations"> My Locations </a>
+        <hr>
+
+        <div id="results">
+            Lat: <span id="lat"><%= lat %></span>
+            Lng: <span id="lng"><%= lng %></span>
+            <br>
+            Timezone: <span id="zone"><%= zone %></span><br>
+            Abbreviation: <span id="abbrev"><%= abbrev %></span><br>
+            GMT: <span id="gmt"><%= gmt %></span><br>
+            Time: <%= time %>
+        </div>
+        <button id="save">Save</button>
+        <button id="delete" disabled>Delete</button>
+        
+        <a href="/">Back</a>
+        
+<%- include('partials/footer.ejs') %>
+    </body>
+</html>

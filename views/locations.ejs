@@ -1,0 +1,28 @@
+<%- include('partials/header.ejs') %>
+    <body id="locationsPage">
+        <div id="locContainer">
+            <a href="/"> Back to Search </a>
+            <h1>Saved Locations</h1>
+            <div id="locs">
+                <% //displaying each location
+                rows.forEach(function(row, i){ %>
+                <br>
+                <hr>
+                    <strong>
+                        <span id="lat"><%= row.city %></span>
+                        <span id="lng"><%= row.state %></span>
+                    </strong>
+                    <br>
+                    Timezone: <span id="zone"><%= row.zone %></span><br>
+                    Abbreviation: <span id="abbrev"><%= row.abbrev %></span><br>
+                    GMT: <span id="gmt"><%= row.gmt %></span><br>
+                    <button data-zone="<%= row.zone %>" class="show">Show Current Time</button>
+                    <br><span hidden></span>
+                <hr><br>
+                <% });%>
+                <br><br>
+            </div>
+        </div>
+        <%- include("partials/footer.ejs") %>
+    </body>
+</html>
